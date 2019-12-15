@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.ractoc.tutorials</groupId>
+    <artifactId>speedment</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+
+    <organization>
+        <name>ractoc.com</name>
+    </organization>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>1.8</java.version>
+
+        <commons-lang.version>3.9</commons-lang.version>
+        <commons-beanutils.version>1.9.4</commons-beanutils.version>
+
+        <spring-boot.version>2.1.6.RELEASE</spring-boot.version>
+        <jackson-datatype.version>2.9.9</jackson-datatype.version>
+        <springfox-swagger.version>2.9.2</springfox-swagger.version>
+        <speedment.version>3.1.15</speedment.version>
+        <mysql.version>8.0.17</mysql.version>
+        <mariadb4j.version>2.3.0</mariadb4j.version>
+        <mariadb-client.version>2.4.2</mariadb-client.version>
+        <lombok.version>1.18.8</lombok.version>
+        <mapstruct.version>1.3.0.Final</mapstruct.version>
+
+        <dbunit.version>2.6.0</dbunit.version>
+        <junit.jupiter.version>5.5.1</junit.jupiter.version>
+        <mockito.version>3.0.0</mockito.version>
+        <mockito-java8.version>2.5.0</mockito-java8.version>
+        <assertj.version>3.12.1</assertj.version>
+        <spring-jdbc.version>5.1.8.RELEASE</spring-jdbc.version>
+
+        <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
+        <maven-surefire-plugin.version>2.22.2</maven-surefire-plugin.version>
+        <maven-javadoc-plugin.version>3.1.1</maven-javadoc-plugin.version>
+
+        <spring.profiles.active>local</spring.profiles.active>
+    </properties>
+
+    <dependencies>
+        <!-- common dependecies -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>${commons-lang.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-beanutils</groupId>
+            <artifactId>commons-beanutils</artifactId>
+            <version>${commons-beanutils.version}</version>
+        </dependency>
+
+        <!-- microservice dependencies -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <version>${spring-boot.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+            <version>${spring-boot.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.datatype</groupId>
+            <artifactId>jackson-datatype-jdk8</artifactId>
+            <version>${jackson-datatype.version}</version>
+        </dependency>
+
+        <!-- interface documentation dependencies -->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>${springfox-swagger.version}</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>${springfox-swagger.version}</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <!-- database dependencies -->
+        <dependency>
+            <groupId>com.speedment</groupId>
+            <artifactId>runtime</artifactId>
+            <version>${speedment.version}</version>
+            <type>pom</type>
+        </dependency>
+        <dependency>
+            <groupId>com.speedment.plugins</groupId>
+            <artifactId>enum-generator</artifactId>
+            <version>${speedment.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>ch.vorburger.mariaDB4j</groupId>
+            <artifactId>mariaDB4j</artifactId>
+            <version>${mariadb4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mariadb.jdbc</groupId>
+            <artifactId>mariadb-java-client</artifactId>
+            <version>${mariadb-client.version}</version>
+        </dependency>
+
+        <!-- compile dependencies -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mapstruct</groupId>
+            <artifactId>mapstruct</artifactId>
+            <version>${mapstruct.version}</version>
+        </dependency>
+
+
+        <!-- test dependencies -->
+        <dependency>
+            <groupId>org.dbunit</groupId>
+            <artifactId>dbunit</artifactId>
+            <version>${dbunit.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>${junit.jupiter.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>${mockito.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-junit-jupiter</artifactId>
+            <version>${mockito.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>info.solidsoft.mockito</groupId>
+            <artifactId>mockito-java8</artifactId>
+            <version>${mockito-java8.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <version>${assertj.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>${spring-jdbc.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven-compiler-plugin.version}</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <forceJavacCompilerUse>true</forceJavacCompilerUse>
+                    <annotationProcessorPaths>
+                        <path>
+                            <groupId>org.mapstruct</groupId>
+                            <artifactId>mapstruct-processor</artifactId>
+                            <version>${mapstruct.version}</version>
+                        </path>
+                        <path>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                            <version>${lombok.version}</version>
+                        </path>
+                    </annotationProcessorPaths>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${maven-surefire-plugin.version}</version>
+                <configuration>
+                    <systemProperties>
+                        <spring.profiles.active>${spring.profiles.active}</spring.profiles.active>
+                        <useSystemClassLoader>false</useSystemClassLoader>
+                    </systemProperties>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>com.speedment</groupId>
+                <artifactId>speedment-maven-plugin</artifactId>
+                <version>${speedment.version}</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>mysql</groupId>
+                        <artifactId>mysql-connector-java</artifactId>
+                        <version>${mysql.version}</version>
+                    </dependency>
+                </dependencies>
+                <configuration>
+                    <dbmsPassword>MyCatalogue</dbmsPassword>
+                    <configFile>${project.basedir}/src/main/resources/json/speedment.json</configFile>
+                    <packageLocation>target/generated-sources/java</packageLocation>
+                    <components>
+                        <component>com.speedment.plugins.enums.EnumGeneratorBundle</component>
+                    </components>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>Add ItemType typeMapper</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>edit</goal>
+                        </goals>
+                        <configuration>
+                            <set>typeMapper:com.speedment.plugins.enums.StringToEnumTypeMapper</set>
+                            <what>column</what>
+                            <where>name:item_type</where>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>Add ItemType enumConstants</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>edit</goal>
+                        </goals>
+                        <configuration>
+                            <set>enumConstants:BOARDGAMES</set>
+                            <what>column</what>
+                            <where>name:item_type</where>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>Generate code for Mysql</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>${spring-boot.version}</version>
+            </plugin>
+        </plugins>
+    </build>
+
+    <profiles>
+        <profile>
+            <id>reload-speedment-json</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>com.speedment</groupId>
+                        <artifactId>speedment-maven-plugin</artifactId>
+                        <version>${speedment.version}</version>
+                        <dependencies>
+                            <dependency>
+                                <groupId>mysql</groupId>
+                                <artifactId>mysql-connector-java</artifactId>
+                                <version>${mysql.version}</version>
+                            </dependency>
+                        </dependencies>
+                        <configuration>
+                            <dbmsUsername>mycollection</dbmsUsername>
+                            <dbmsPassword>MyCollection</dbmsPassword>
+                            <dbmsPort>9876</dbmsPort>
+                            <dbmsSchemas>my_collection</dbmsSchemas>
+                            <companyName>ractoc.com</companyName>
+                            <configFile>${project.basedir}/src/main/resources/json/speedment.json</configFile>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <id>re-initialize</id>
+                                <goals>
+                                    <goal>init</goal>
+                                </goals>
+                            </execution>
+                            <execution>
+                                <id>update json for Mysql</id>
+                                <goals>
+                                    <goal>reload</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+</project>
