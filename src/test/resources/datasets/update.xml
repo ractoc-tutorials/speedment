@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <item id="e00f7211-1982-40c1-ac96-b04c3a44adde" name="test name" lead="test description" item_type="BOARDGAMES" />
+    <item id="f5d58333-0e06-4824-94f6-eb99995ea5dd" name="more tests" lead="some nice text" item_type="BOARDGAMES" />
+</dataset>

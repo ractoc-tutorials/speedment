@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <item name="create test" lead="base lead" item_type="BOARDGAMES" />
+    <item name="more tests" lead="some nice text" item_type="BOARDGAMES" />
+    <item name="test name" lead="test description" item_type="BOARDGAMES" />
+</dataset>

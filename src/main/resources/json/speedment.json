@@ -1,0 +1,109 @@
+{
+  "config" : {
+    "speedmentVersion" : "Speedment:3.1.15",
+    "companyName" : "ractoc.com",
+    "appId" : "f5629764-7336-4d3e-9e40-f47f9735620e",
+    "name" : "speedment",
+    "packageLocation" : "target/generated-sources/java",
+    "packageName" : "com.ractoc.tutorials.speedment.db",
+    "id" : "speedment",
+    "enabled" : true,
+    "dbmses" : [
+      {
+        "port" : 9876,
+        "schemas" : [
+          {
+            "tables" : [
+              {
+                "primaryKeyColumns" : [
+                  {
+                    "name" : "id",
+                    "id" : "id",
+                    "ordinalPosition" : 1
+                  }
+                ],
+                "indexes" : [
+                  {
+                    "unique" : true,
+                    "name" : "name_UNIQUE",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "ASC",
+                        "name" : "name",
+                        "id" : "name",
+                        "ordinalPosition" : 1
+                      },
+                      {
+                        "orderType" : "ASC",
+                        "name" : "item_type",
+                        "id" : "item_type",
+                        "ordinalPosition" : 2
+                      }
+                    ],
+                    "id" : "name_UNIQUE"
+                  },
+                  {
+                    "unique" : true,
+                    "name" : "PRIMARY",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "ASC",
+                        "name" : "id",
+                        "id" : "id",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "id" : "PRIMARY"
+                  }
+                ],
+                "isView" : false,
+                "columns" : [
+                  {
+                    "databaseType" : "java.lang.String",
+                    "nullable" : false,
+                    "name" : "id",
+                    "id" : "id",
+                    "ordinalPosition" : 1
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "nullable" : false,
+                    "name" : "name",
+                    "id" : "name",
+                    "ordinalPosition" : 2
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "nullable" : false,
+                    "name" : "lead",
+                    "id" : "lead",
+                    "ordinalPosition" : 3
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "nullable" : false,
+                    "name" : "item_type",
+                    "id" : "item_type",
+                    "ordinalPosition" : 4,
+                    "typeMapper" : "com.speedment.plugins.enums.StringToEnumTypeMapper",
+                    "enumConstants" : "BOARDGAMES"
+                  }
+                ],
+                "name" : "item",
+                "id" : "item"
+              }
+            ],
+            "name" : "my_collection",
+            "id" : "my_collection",
+            "enabled" : true
+          }
+        ],
+        "name" : "speedment",
+        "typeName" : "MySQL",
+        "id" : "speedment",
+        "enabled" : true,
+        "username" : "mycollection"
+      }
+    ]
+  }
+}
