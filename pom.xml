@@ -21,7 +21,7 @@
         <jackson-datatype.version>2.9.9</jackson-datatype.version>
         <springfox-swagger.version>2.9.2</springfox-swagger.version>
         <speedment.version>3.1.15</speedment.version>
-        <mysql.version>8.0.17</mysql.version>
+        <mysql.version>8.0.28</mysql.version>
         <mariadb4j.version>2.3.0</mariadb4j.version>
         <mariadb-client.version>2.4.2</mariadb-client.version>
         <lombok.version>1.18.8</lombok.version>
